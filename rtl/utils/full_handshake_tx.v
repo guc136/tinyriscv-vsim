@@ -57,6 +57,9 @@ module full_handshake_tx #(
         end
     end
 
+    reg ack_d;
+    reg ack;
+
     always @ (*) begin
         case (state)
             STATE_IDLE: begin
@@ -88,8 +91,6 @@ module full_handshake_tx #(
         endcase
     end
 
-    reg ack_d;
-    reg ack;
 
     // 将应答信号打两拍进行同步
     always @ (posedge clk or negedge rst_n) begin

@@ -53,6 +53,9 @@ module full_handshake_rx #(
         end
     end
 
+    reg req_d;
+    reg req;
+
     always @ (*) begin
         case (state)
             // 等待TX请求信号req=1
@@ -77,8 +80,6 @@ module full_handshake_rx #(
         endcase
     end
 
-    reg req_d;
-    reg req;
 
     // 将请求信号打两拍进行同步
     always @ (posedge clk or negedge rst_n) begin

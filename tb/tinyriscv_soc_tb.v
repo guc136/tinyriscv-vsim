@@ -483,19 +483,19 @@ module tinyriscv_soc_tb;
         end
 `endif
 
-        $finish;
+        //$finish;
     end
 
     // sim timeout
     initial begin
         #500000
         $display("Time Out.");
-        $finish;
+        //$finish;
     end
 
     // read mem data
     initial begin
-        $readmemh ("inst.data", tinyriscv_soc_top_0.u_rom._rom);
+        $readmemh ("../sim/inst.data", tinyriscv_soc_top_0.u_rom._rom);
     end
 
     // generate wave file, used by gtkwave

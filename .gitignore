@@ -2,3 +2,6 @@
 *.o
 *.ko
 *.obj
+
+/vsim-prj/*
+!/vsim-prj/do.tcl
