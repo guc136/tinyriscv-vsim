@@ -4,4 +4,4 @@
 *.obj
 
 /vsim-prj/*
-!/vsim-prj/do.tcl
+!/vsim-prj/*.tcl
